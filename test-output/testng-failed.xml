@@ -3,11 +3,11 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="capstone.ecommerce.tests.SignupTest">
+      <class name="capstone.ecommerce.tests.HomeTest1">
         <methods>
-          <include name="signupTest"/>
+          <include name="HomepageLinkTest1"/>
         </methods>
-      </class> <!-- capstone.ecommerce.tests.SignupTest -->
+      </class> <!-- capstone.ecommerce.tests.HomeTest1 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

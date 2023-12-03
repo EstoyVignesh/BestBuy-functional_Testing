@@ -7,16 +7,7 @@ import capstone.ecommerce.utils.SeWrappers;
 
 public class SignupPage2 extends SeWrappers {
 	
-/*	@FindBy(xpath="//h4[text()='United States']")
-	public WebElement country;
-	
-	@FindBy(xpath="//span[text()='North Anchorage (Tikahtnu Commons)']")
-	public WebElement confirm;
-	
-	*/
-	
-	//@FindBy(xpath="//button[@class='c-close-icon']")
-//	public WebElement pop;
+
 	
 	@FindBy(xpath="//span[text()='Account']")
 	public WebElement account;
@@ -45,39 +36,13 @@ public class SignupPage2 extends SeWrappers {
 	@FindBy(xpath="//button[@type='submit'] ")
 	public WebElement button1;
 	
-	@FindBy(xpath="//strong[text()='Sorry, there was a problem creating your account.']")
+	@FindBy(xpath="//div[@style='font-weight: normal;']")
 			public WebElement error; 
 	
 	@FindBy(xpath="//a[text()='Return to previous page']")
 	public WebElement returnPage1;
 	
-	
-/*	public void ctrySel()
-	{
-		waitForElement(country,20);
-		clickElement(country);
-	}
-	
-	public void greatdeals()
-	{
-		waitForElement(confirm,20);
-		
-		String str = confirm.getText();
-		
-		if(str.equals("North Anchorage (Tikahtnu Commons)"));
-		{
-			System.out.println("Condition Satisfied");
-		} 						
-		
-	}
-	*/
-	
-/*	public void popup()
-	{
-		waitForElement(pop,20);
-		clickElement(pop);
-	}
-*/
+
 	public void myAccount() 
 	{
 		
@@ -151,9 +116,13 @@ public class SignupPage2 extends SeWrappers {
 		waitForElement(error,20);
 		
 		String str = error.getText();
-		if(str.equals("Sorry, there was a problem creating your account."))
+		if(str.contains("Please"))
 		{
 			System.out.println("While Clicking SignUp button Error Message Pop's Up Even using Correct Credential's. ");
+		}
+		else
+		{
+			System.out.println("Condition Failed because It asks MobileNumber for Confirmation");
 		}
 		
 	}

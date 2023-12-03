@@ -3,11 +3,16 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-		<class name ="capstone.ecommerce.utils.SeWrappers"/> 
-		<class name ="capstone.ecommerce.utils.ECwrapper"/>
-		<class name ="capstone.ecommerce.utils.Reports"/>
-      <class name="capstone.ecommerce.tests.SignupTest"/>
-     <class name="capstone.ecommerce.tests.LoginTest"/>
+			<class name="capstone.ecommerce.utils.SeWrappers" />
+			<class name="capstone.ecommerce.utils.ECwrapper" />
+			<class name="capstone.ecommerce.utils.Reports" />
+			<class name="capstone.ecommerce.tests.SignupTest" />
+			<class name="capstone.ecommerce.tests.LoginTest" />
+			<class name="capstone.ecommerce.tests.HomeTest1" />
+			<class name="capstone.ecommerce.tests.BottonlinksTest" />
+			<class name="capstone.ecommerce.tests.ShopByDeptTest" />
+			<class name="capstone.ecommerce.tests.SearchaddTest" />
+			<class name="capstone.ecommerce.tests.MenuBrandsTest" />
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

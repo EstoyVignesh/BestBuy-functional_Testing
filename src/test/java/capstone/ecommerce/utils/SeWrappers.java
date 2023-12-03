@@ -21,6 +21,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
+
+
 public class SeWrappers {
 
 	public static WebDriver driver=null;
@@ -100,6 +102,23 @@ public class SeWrappers {
 			ex.printStackTrace();
 		}
 	}
+	
+	//method to type text in the web page Without Using Clear 
+		public void typeTextwithoutClear(WebElement element, String text)
+		{
+			try
+			{
+				element.sendKeys(text);
+				Reports.reportStep("PASS","Typed the text "+text+" successfully");
+
+			}
+			catch(Exception ex)
+			{
+				Reports.reportStep("FAIL","Problem whle typing the "+text);
+
+				ex.printStackTrace();
+			}
+		}
 	
 	//Type Text with EnterKey
 	public void keysEnter(WebElement element, String text)
@@ -190,6 +209,8 @@ public class SeWrappers {
 			ex.printStackTrace();
 		}
 	}
+	
+	
 
 	//Explicit wait
 
@@ -210,7 +231,23 @@ public class SeWrappers {
 		}
 	}
 
+// Clickable Element Wait
+	public void waitForClickElement(WebElement ele, int timeout)
+	{
+		try
+		{
+			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(timeout));
+			wait.until(ExpectedConditions.elementToBeClickable(ele));
+			Reports.reportStep("PASS","Successfully waited for the element using explicit wait ");
 
+		}
+		catch(Exception ex)
+		{
+			Reports.reportStep("FAIL","Problem while waiting for the element");
+
+			ex.printStackTrace();
+		}
+	}
 	//fluent wait
 
 	public void fluentWaitForElement(WebElement ele, int pollingFrequency,  int timeout)
@@ -682,7 +719,7 @@ public class SeWrappers {
 			return retVal;
 		}
 		
-		
+		//To Check Whether the Element is Displayed or Not
 		public boolean verifyDisplayed(WebElement ele)
 		{
 			boolean retVal=false;

@@ -4,6 +4,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import capstone.ecommerce.pages.LoginPage1;
 import capstone.ecommerce.pages.LoginPage2;
+import capstone.ecommerce.pages.MenuBrandsPage;
+import capstone.ecommerce.pages.SearchaddPage;
+import capstone.ecommerce.pages.ShopdepartPage;
+import capstone.ecommerce.pages.BottomLinksPage;
+import capstone.ecommerce.pages.HomePage1;
+import capstone.ecommerce.pages.HomePage2;
 import capstone.ecommerce.pages.SignupPage1;
 import capstone.ecommerce.pages.SignupPage2;
 
@@ -98,6 +104,109 @@ public class ECwrapper extends SeWrappers
 			
 	}
 	
+	public void homepageLink1()
+	{
+		HomePage1 mu = PageFactory.initElements(driver, HomePage1.class);
+		
+		mu.ctrySel();
+		mu.greatdeals();
+		mu.allLinks();
+		mu.hdeals();
+		//mu.hdealsPopup();
+		mu.tdeals();
+		mu.dod();
+		mu.mbbm();
+		mu.crecard();
+		mu.gifcard();
+		mu.gifIdea();
+		
+				
+		
+	}
+	
+	public void homepageLink2()
+	{
+		HomePage2 mu1 = PageFactory.initElements(driver, HomePage2.class);
+		
+		//mu1.ctrySel();
+		//mu1.greatdeals();
+				
+		mu1.moreclic();
+		mu1.morecli1();
+		mu1.moreclic1();
+		mu1.morecli2();
+		mu1.moreclic2();
+		mu1.morecli3();
+		mu1.moreclic3();
+		mu1.morecli4();
+				
+		mu1.closBrow1();
+		
+		
+	}
+	
+	public void bottompageLink() throws InterruptedException
+	{
+		BottomLinksPage bot = PageFactory.initElements(driver, BottomLinksPage.class);
+		
+		bot.ctrySel();
+		bot.tercons();
+		bot.TermconsVali();
+		bot.exitout();
+		
+		
+	}
+	
+	public void shopByDept() throws InterruptedException
+	{
+		ShopdepartPage sd = PageFactory.initElements(driver, ShopdepartPage.class);
+		
+		sd.ctrySel();
+		sd.selMenu();
+		sd.tvshows();
+		sd.selectType();
+		sd.printres();
+		
+		sd.addcart();
+		sd.micart();
+		captureScreenshot("My Cart Page");
+		sd.exitbrow();
+		
+	}
+	
+	public void searchAdd() 
+	{
+		SearchaddPage sp = PageFactory.initElements(driver, SearchaddPage.class);
+		
+		sp.ctrySel();
+		sp.searchBr("Asus");
+		sp.clicsearch(300);
+		sp.addCart();
+		captureScreenshot("addcartbySearch");
+		sp.addCartVal();
+		captureScreenshot("MyCartbySearch");
+		sp.searclose();
+		
+		
+	}
+	
+	public void selBrands() 
+	{
+		MenuBrandsPage mp = PageFactory.initElements(driver, MenuBrandsPage.class);
+		
+		mp.ctrySel();
+		mp.selMenu();
+		mp.clicBrand();
+		mp.clicSamsung();
+		mp.clicShopnow();
+		mp.clicCart();
+		mp.cartVald();
+		captureScreenshot("MyCartbyBrands");
+		mp.exitExe();
+		
+		
+		
+	}
 	
 	
 	
