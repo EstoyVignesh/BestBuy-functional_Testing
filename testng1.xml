@@ -13,6 +13,7 @@
 			<class name="capstone.ecommerce.tests.ShopByDeptTest" />
 			<class name="capstone.ecommerce.tests.SearchaddTest" />
 			<class name="capstone.ecommerce.tests.MenuBrandsTest" />
+			<class name="capstone.ecommerce.tests.PaypalTest" />
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

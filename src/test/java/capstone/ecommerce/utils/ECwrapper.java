@@ -2,9 +2,12 @@ package capstone.ecommerce.utils;
 
 import org.openqa.selenium.support.PageFactory;
 
+
+
 import capstone.ecommerce.pages.LoginPage1;
 import capstone.ecommerce.pages.LoginPage2;
 import capstone.ecommerce.pages.MenuBrandsPage;
+import capstone.ecommerce.pages.PaypalPage;
 import capstone.ecommerce.pages.SearchaddPage;
 import capstone.ecommerce.pages.ShopdepartPage;
 import capstone.ecommerce.pages.BottomLinksPage;
@@ -21,6 +24,8 @@ public class ECwrapper extends SeWrappers
 	{
 	SignupPage1 sign = PageFactory.initElements(driver, SignupPage1.class);
 	
+	//sign.linkVerify();
+	//sign.verifyLinkActive(null);;
 	sign.ctrySel();
 	sign.greatdeals();
 	
@@ -168,6 +173,8 @@ public class ECwrapper extends SeWrappers
 		sd.printres();
 		
 		sd.addcart();
+		
+		sd.addcartVali();
 		sd.micart();
 		captureScreenshot("My Cart Page");
 		sd.exitbrow();
@@ -202,11 +209,42 @@ public class ECwrapper extends SeWrappers
 		mp.clicCart();
 		mp.cartVald();
 		captureScreenshot("MyCartbyBrands");
-		mp.exitExe();
+		mp.goCart();
+		mp.checkOut();
+		captureScreenshot("Validation1");
+		mp.mailid("Vjgfufi2gma.com");
+		mp.passid("1221221");
+		mp.accSignin();
+		captureScreenshot("Validation2");
+		mp.accexit();
 		
 		
 		
 	}
+	
+	public void paymentusingChecoutPay()
+	{
+	
+	PaypalPage mp = PageFactory.initElements(driver, PaypalPage.class);
+	
+
+	mp.ctrySel();
+	mp.selMenu();
+	mp.clicBrand();
+	mp.clicSamsung();
+	mp.clicShopnow();
+	mp.clicCart();
+	mp.cartVald();
+	captureScreenshot("Validation");
+	mp.goCart();
+	mp.checkOutPay();
+	captureScreenshot("PaypalCheckout");
+	mp.checkOutValidate();
+	
+	captureScreenshot("PaymentValidate");
+	mp.exitPay();
+}
+
 	
 	
 	

@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 import capstone.ecommerce.utils.SeWrappers;
 
-public class MenuBrandsPage extends SeWrappers {
+public class PaypalPage extends SeWrappers {
 	
 	@FindBy(xpath="//h4[text()='United States']")
 	public WebElement country;
@@ -35,17 +35,13 @@ public class MenuBrandsPage extends SeWrappers {
 	@FindBy(xpath="//a[text()='Go to Cart']")
 	public WebElement cartgo; 
 	
-	@FindBy(xpath="//button[text()='Checkout']")
-	public WebElement chekout; 
+		
+	@FindBy(xpath="//button[@class='checkout-buttons__paypal btn v-medium']")
+	public WebElement paypal;
 	
-	@FindBy(id="fld-e")
-	public WebElement mail1;
+	@FindBy(xpath="//span[text()='This site can’t be reached']")
+	public WebElement validate;
 	
-	@FindBy(id="fld-p1")
-	public WebElement pass2;
-	
-	@FindBy(xpath="//button[text()='Sign In']")
-	public WebElement siin;
 	
 
 	
@@ -87,7 +83,7 @@ public class MenuBrandsPage extends SeWrappers {
 			if(pop.isDisplayed())
 			{
 				waitForElement(pop,20);
-				clickElement(pop);
+				dismissAlert();
 			}
 			else
 			{
@@ -124,36 +120,34 @@ public class MenuBrandsPage extends SeWrappers {
 		clickElement(cartgo);
 	}
 	
-	public void checkOut()
+	public void checkOutPay()
 	{
-		waitForElement(chekout,20);
-		clickElement(chekout);
+		waitForElement(paypal,20);
+		clickElement(paypal);
 	}
 	
-	public void mailid(String ema)
+	public void checkOutValidate()
 	{
-		waitForElement(mail1,20);
-		typeText(mail1,ema);
-	}
-
-	public void passid(String pwd)
-	{
-		waitForElement(pass2,20);
-		typeText(pass2,pwd);
-	}
-	
-	public void accSignin()
-	{
-		waitForElement(siin,20);
-		clickElement(siin);	
-		
+		//waitForElement(validate,20);
+		if(validate.isDisplayed())
+		{
+			System.out.println("Problem While going to the Payment Page");
+		}
+		else
+		{
+			System.out.println("Payment Page Opened");
+		}
 	}
 	
-	public void accexit()
+	public void exitPay()
 	{
 		closeAllBrowsers();
-		
 	}
 	
 	
+	
+	
+
+	
+
 }

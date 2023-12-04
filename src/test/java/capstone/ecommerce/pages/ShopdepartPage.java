@@ -26,6 +26,10 @@ public class ShopdepartPage extends SeWrappers{
 	@FindBy(xpath="//button[@class='c-button c-button-primary c-button-sm c-button-block c-button-icon c-button-icon-leading add-to-cart-button']")
 	public WebElement add; 
 	
+	@FindBy(xpath="//a[@class='c-button-link go-to-cart']")
+	public WebElement val;
+
+	
 	@FindBy(xpath="//h1[text()='Your Cart']")
 	public WebElement mycart;
 
@@ -70,6 +74,13 @@ public class ShopdepartPage extends SeWrappers{
 		
 	}
 	
+	public void addcartVali()
+	{
+		waitForElement(val,20);
+		clickElement(val);
+			
+	}
+	
 	public void micart()
 	{
 		waitForElement(mycart,20);
@@ -86,4 +97,8 @@ public class ShopdepartPage extends SeWrappers{
 	{
 		closeAllBrowsers();
 	}
+	
+
 }
+
+
