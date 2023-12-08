@@ -14,10 +14,7 @@ import capstone.ecommerce.utils.SeWrappers;
 public class HomePage1 extends SeWrappers {
 	
 	@FindBy(xpath="//h4[text()='United States']")
-	public WebElement country;
-	
-	@FindBy(xpath="//span[text()='North Anchorage (Tikahtnu Commons)']")
-	public WebElement confirm;
+	public WebElement country;	
 	
 	@FindBy(xpath="//div[@class='bottom-fluid-container ']")
 	public WebElement links;
@@ -51,18 +48,6 @@ public class HomePage1 extends SeWrappers {
 		clickElement(country);
 	}
 	
-	public void greatdeals()
-	{
-		waitForElement(confirm,20);
-		
-		String str = confirm.getText();
-		
-		if(str.equals("North Anchorage (Tikahtnu Commons)"));
-		{
-			System.out.println("Condition Satisfied");
-		} 					
-		
-	}
 	
 	public void allLinks()
 	{

@@ -1,5 +1,6 @@
 package capstone.ecommerce.tests;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import capstone.ecommerce.utils.ECwrapper;
@@ -12,12 +13,14 @@ public class SearchaddTest extends SeWrappers {
 	ECwrapper ec = new ECwrapper();
 	Reports report = new Reports();
 	
+	
+	@Parameters({"browser"})
 	@Test	
-	public void seachandAdd()
+	public void seachandAdd(String browserName)
 	{
 		try {
 			report.setTCDesc("Validating the Shop By search the product and add it ");
-			launchBrowser("https://www.bestbuy.com/");			    
+			launchCrossBrowser(browserName,"https://www.bestbuy.com/");			    
 			
 			
 			

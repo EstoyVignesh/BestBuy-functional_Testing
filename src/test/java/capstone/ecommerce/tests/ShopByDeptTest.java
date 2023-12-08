@@ -1,5 +1,6 @@
 package capstone.ecommerce.tests;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import capstone.ecommerce.utils.ECwrapper;
@@ -12,12 +13,14 @@ public class ShopByDeptTest extends SeWrappers{
 	ECwrapper ec = new ECwrapper();
 	Reports report = new Reports();
 	
+	
+	@Parameters({"browser"})
 	@Test	
-	public void deptshop()
+	public void deptshop(String browserName)
 	{
 		try {
 			report.setTCDesc("Validating the Shop By Department Menu ");
-			launchBrowser("https://www.bestbuy.com/");			    
+			launchCrossBrowser(browserName,"https://www.bestbuy.com/");			    
 			
 			
 			

@@ -1,11 +1,15 @@
 package capstone.ecommerce.utils;
 
 import java.io.File;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.time.Duration;
+import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -13,11 +17,15 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+
 
 
 
@@ -29,30 +37,103 @@ public class SeWrappers {
 
 
 	//method to launch the chrome browser with the given url
-	public void launchBrowser(String url)
-	{
-		try
+		public void norlaunchBrowser(String url)
 		{
-			driver= new ChromeDriver();
+			try
+			{
+				driver= new ChromeDriver();
+				driver.get(url);
+				driver.manage().window().maximize();
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+				System.out.println("Browser launched successfully");
+				
+				//to capture logs in the report
+				Reports.reportStep("PASS","Chrome browser launched successfully");
+
+			}
+			catch(Exception ex)
+			{
+				Reports.reportStep("FAIL","Problem while launching the browser");
+
+				System.out.println("Problem while launching the browser");
+				ex.printStackTrace();
+
+			}
+		}
+		
+		//Launchbrowser with CrossBrowsing
+		public void launchCrossBrowser(String browserName, String url)
+		{
+			try {
+				 
+			
+			if(browserName.equals("chrome"))
+			{
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--disable-notifications");
+
+				 driver = new ChromeDriver(options);
+
+			}
+			else if (browserName.equals("edge"))
+			{
+				driver= new EdgeDriver();
+			}
+			else if(browserName.equals("headlesschrome"))
+			{
+				ChromeOptions opt = new ChromeOptions();
+				opt.addArguments("--headless");
+
+				 driver = new ChromeDriver(opt);
+			}
+			
 			driver.get(url);
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 			System.out.println("Browser launched successfully");
+			Reports.reportStep("PASS","Chrome  and Edge browser launched successfully");
 			
-			//to capture logs in the report
-			Reports.reportStep("PASS","Chrome browser launched successfully");
-
 		}
 		catch(Exception ex)
 		{
-			Reports.reportStep("FAIL","Problem while launching the browser");
+
+			Reports.reportStep("FAIL","Problem while launching Chrome and Edge browser");
 
 			System.out.println("Problem while launching the browser");
 			ex.printStackTrace();
 
 		}
 	}
-
+		
+		// Listing Links
+		 public void verifyUrl(String linkUrl)
+		  {
+			 
+					
+			
+		        try 
+		        {
+		           URL url = new URL(linkUrl);
+		           
+		           HttpURLConnection httpURLConnect=(HttpURLConnection)url.openConnection();
+		           
+		           httpURLConnect.setConnectTimeout(3000);
+		           
+		           httpURLConnect.connect();
+		           
+		           if(httpURLConnect.getResponseCode()==200)
+		           {
+		               System.out.println(linkUrl+" - "+httpURLConnect.getResponseMessage());
+		            }
+		          if(httpURLConnect.getResponseCode()==HttpURLConnection.HTTP_NOT_FOUND)  
+		           {
+		               System.out.println(linkUrl+" - "+httpURLConnect.getResponseMessage() + " - "+ HttpURLConnection.HTTP_NOT_FOUND);
+		            }
+		        } catch (Exception e) {
+		           
+		        }    
+				}
+		  
 	//method to close the current browser window
 	public void closeCurrentBrowser()
 	{

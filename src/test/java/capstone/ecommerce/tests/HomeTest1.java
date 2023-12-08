@@ -1,5 +1,6 @@
 package capstone.ecommerce.tests;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import capstone.ecommerce.utils.ECwrapper;
@@ -11,12 +12,14 @@ public class HomeTest1 extends SeWrappers {
 	ECwrapper ec = new ECwrapper();
 	Reports report = new Reports();
 	
+	
+	@Parameters({"browser"})
 	@Test	
-	public void HomepageLinkTest1()
+	public void HomepageLinkTest1(String browserName)
 	{
 		try {
 			report.setTCDesc("Validating the HomePage Links and its Titles ");
-			launchBrowser("https://www.bestbuy.com/");			    
+			launchCrossBrowser(browserName,"https://www.bestbuy.com/");			    
 			
 			
 			

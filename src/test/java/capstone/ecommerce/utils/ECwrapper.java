@@ -13,11 +13,21 @@ import capstone.ecommerce.pages.ShopdepartPage;
 import capstone.ecommerce.pages.BottomLinksPage;
 import capstone.ecommerce.pages.HomePage1;
 import capstone.ecommerce.pages.HomePage2;
+import capstone.ecommerce.pages.LinkVerifyPage;
 import capstone.ecommerce.pages.SignupPage1;
 import capstone.ecommerce.pages.SignupPage2;
 
 public class ECwrapper extends SeWrappers
 {
+	
+	public void linkValidation(String url)
+	{
+		LinkVerifyPage lp = PageFactory.initElements(driver, LinkVerifyPage.class);
+		
+		lp.linktag(url);
+		lp.exitPag();
+		
+	}
 	
 	// Account Creation with Invalid Data
 	public void selection() throws InterruptedException 
@@ -39,7 +49,7 @@ public class ECwrapper extends SeWrappers
 	sign.setpassword("123123123");
 	sign.setRepass("123123123");
 	sign.setMobile("7815124sfvh");
-	captureScreenshot("IncorrectID's");
+	captureScreenshot("Validation1-Signup");
 	sign.clickAcc();
 	sign.returnToPage();
 	
@@ -64,7 +74,7 @@ public class ECwrapper extends SeWrappers
 		sign1.setMobile1("7092909386");
 		sign1.clickAcc1(1300);
 		sign1.signupCheck();
-		captureScreenshot("correctID's");	
+		captureScreenshot("Validation2-Signup");	
 		sign1.returnToPage1();
 		
 		
@@ -86,7 +96,7 @@ public class ECwrapper extends SeWrappers
 		log1.mailid("Vihhi@mail.com");
 		log1.passid("121221");
 		log1.accSignin();
-		captureScreenshot("IncorrectLoginID's");
+		captureScreenshot("Validation3-Login");
 		log1.returnToPage();
 		
 			
@@ -103,7 +113,7 @@ public class ECwrapper extends SeWrappers
 		log1.mailid("vickyphysics1998@gmail.com");
 		log1.passid("@Vignesh1998");
 		log1.accSignin();
-		captureScreenshot("correctLoginID's");
+		captureScreenshot("Validation4-Login");
 		log1.errorSignin();
 		log1.returnToPage2();
 			
@@ -113,11 +123,10 @@ public class ECwrapper extends SeWrappers
 	{
 		HomePage1 mu = PageFactory.initElements(driver, HomePage1.class);
 		
-		mu.ctrySel();
-		mu.greatdeals();
+		mu.ctrySel();	
 		mu.allLinks();
 		mu.hdeals();
-		//mu.hdealsPopup();
+		
 		mu.tdeals();
 		mu.dod();
 		mu.mbbm();
@@ -176,7 +185,7 @@ public class ECwrapper extends SeWrappers
 		
 		sd.addcartVali();
 		sd.micart();
-		captureScreenshot("My Cart Page");
+		captureScreenshot("Validation5-cart");
 		sd.exitbrow();
 		
 	}
@@ -189,9 +198,9 @@ public class ECwrapper extends SeWrappers
 		sp.searchBr("Asus");
 		sp.clicsearch(300);
 		sp.addCart();
-		captureScreenshot("addcartbySearch");
+		captureScreenshot("Validation6");
 		sp.addCartVal();
-		captureScreenshot("MyCartbySearch");
+		captureScreenshot("Validation7");
 		sp.searclose();
 		
 		
@@ -208,14 +217,16 @@ public class ECwrapper extends SeWrappers
 		mp.clicShopnow();
 		mp.clicCart();
 		mp.cartVald();
-		captureScreenshot("MyCartbyBrands");
+		captureScreenshot("Validation8-Brands");
 		mp.goCart();
 		mp.checkOut();
-		captureScreenshot("Validation1");
-		mp.mailid("Vjgfufi2gma.com");
-		mp.passid("1221221");
-		mp.accSignin();
-		captureScreenshot("Validation2");
+		
+		mp.gotoguest();
+		mp.mailid("vickyphysics1998@gmail.com");
+		mp.passid("8989881998");
+		mp.clicguest();
+		mp.message();
+		captureScreenshot("Validation9-Payment");
 		mp.accexit();
 		
 		
@@ -235,13 +246,12 @@ public class ECwrapper extends SeWrappers
 	mp.clicShopnow();
 	mp.clicCart();
 	mp.cartVald();
-	captureScreenshot("Validation");
+	captureScreenshot("Validation10-checkout");
 	mp.goCart();
 	mp.checkOutPay();
-	captureScreenshot("PaypalCheckout");
-	mp.checkOutValidate();
-	
-	captureScreenshot("PaymentValidate");
+	captureScreenshot("Validation11-Paypal");
+	mp.checkOutValidate();	
+	captureScreenshot("Validation12");
 	mp.exitPay();
 }
 

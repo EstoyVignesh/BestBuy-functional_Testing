@@ -1,69 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-04T10:46:31 IST" name="Suite" finished-at="2023-12-04T10:51:04 IST" duration-ms="272736">
+  <suite started-at="2023-12-08T16:58:58 IST" name="Suite" finished-at="2023-12-08T17:34:39 IST" duration-ms="2141119">
     <groups>
     </groups>
-    <test started-at="2023-12-04T10:46:31 IST" name="Test" finished-at="2023-12-04T10:51:04 IST" duration-ms="272736">
+    <test started-at="2023-12-08T16:58:58 IST" name="chromeTest" finished-at="2023-12-08T17:34:39 IST" duration-ms="2141119">
       <class name="capstone.ecommerce.utils.Reports">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:capstone.ecommerce.utils.Reports@3fc2959f]" started-at="2023-12-04T10:46:31 IST" name="startReport" finished-at="2023-12-04T10:46:31 IST" duration-ms="291" status="PASS">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:capstone.ecommerce.utils.Reports@477b4cdf]" started-at="2023-12-08T16:58:58 IST" name="startReport" finished-at="2023-12-08T16:58:58 IST" duration-ms="370" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:capstone.ecommerce.utils.Reports@3fc2959f]" started-at="2023-12-04T10:51:04 IST" name="endReport" finished-at="2023-12-04T10:51:05 IST" duration-ms="590" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:capstone.ecommerce.utils.Reports@477b4cdf]" started-at="2023-12-08T17:34:40 IST" name="endReport" finished-at="2023-12-08T17:34:40 IST" duration-ms="341" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
       </class> <!-- capstone.ecommerce.utils.Reports -->
       <class name="capstone.ecommerce.tests.LoginTest">
-        <test-method signature="signupTest1()[pri:0, instance:capstone.ecommerce.tests.LoginTest@1fa121e2]" started-at="2023-12-04T10:46:36 IST" name="signupTest1" finished-at="2023-12-04T10:47:12 IST" duration-ms="36264" status="PASS">
+        <test-method signature="signupTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.LoginTest@79079097]" started-at="2023-12-08T17:03:20 IST" name="signupTest1" finished-at="2023-12-08T17:07:06 IST" duration-ms="226424" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[headlesschrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signupTest1 -->
       </class> <!-- capstone.ecommerce.tests.LoginTest -->
       <class name="capstone.ecommerce.tests.ShopByDeptTest">
-        <test-method signature="deptshop()[pri:0, instance:capstone.ecommerce.tests.ShopByDeptTest@62ddbd7e]" started-at="2023-12-04T10:48:39 IST" name="deptshop" finished-at="2023-12-04T10:49:13 IST" duration-ms="34691" status="PASS">
+        <test-method signature="deptshop(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.ShopByDeptTest@4e08711f]" started-at="2023-12-08T17:14:01 IST" name="deptshop" finished-at="2023-12-08T17:19:37 IST" duration-ms="336483" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[headlesschrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deptshop -->
       </class> <!-- capstone.ecommerce.tests.ShopByDeptTest -->
+      <class name="capstone.ecommerce.tests.LinkverifyTest">
+        <test-method signature="signupTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.LinkverifyTest@3c9754d8]" started-at="2023-12-08T16:58:58 IST" name="signupTest1" finished-at="2023-12-08T16:59:44 IST" duration-ms="45833" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[headlesschrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupTest1 -->
+      </class> <!-- capstone.ecommerce.tests.LinkverifyTest -->
       <class name="capstone.ecommerce.tests.MenuBrandsTest">
-        <test-method signature="selectbyBrand()[pri:0, instance:capstone.ecommerce.tests.MenuBrandsTest@6ed3ccb2]" started-at="2023-12-04T10:49:42 IST" name="selectbyBrand" finished-at="2023-12-04T10:50:25 IST" duration-ms="42194" status="PASS">
+        <test-method signature="selectbyBrand(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.MenuBrandsTest@26794848]" started-at="2023-12-08T17:23:46 IST" name="selectbyBrand" finished-at="2023-12-08T17:29:13 IST" duration-ms="327078" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[headlesschrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectbyBrand -->
       </class> <!-- capstone.ecommerce.tests.MenuBrandsTest -->
       <class name="capstone.ecommerce.tests.BottonlinksTest">
-        <test-method signature="BottLinkTest1()[pri:0, instance:capstone.ecommerce.tests.BottonlinksTest@4116aac9]" started-at="2023-12-04T10:48:25 IST" name="BottLinkTest1" finished-at="2023-12-04T10:48:39 IST" duration-ms="13557" status="PASS">
+        <test-method signature="BottLinkTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.BottonlinksTest@4b2bac3f]" started-at="2023-12-08T17:10:49 IST" name="BottLinkTest1" finished-at="2023-12-08T17:14:01 IST" duration-ms="192360" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[headlesschrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BottLinkTest1 -->
       </class> <!-- capstone.ecommerce.tests.BottonlinksTest -->
       <class name="capstone.ecommerce.tests.PaypalTest">
-        <test-method signature="selectbyBrand()[pri:0, instance:capstone.ecommerce.tests.PaypalTest@1a677343]" started-at="2023-12-04T10:50:25 IST" name="selectbyBrand" finished-at="2023-12-04T10:51:04 IST" duration-ms="39375" status="PASS">
+        <test-method signature="selectbyBrand(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.PaypalTest@302552ec]" started-at="2023-12-08T17:29:13 IST" name="selectbyBrand" finished-at="2023-12-08T17:34:39 IST" duration-ms="326000" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[headlesschrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectbyBrand -->
       </class> <!-- capstone.ecommerce.tests.PaypalTest -->
       <class name="capstone.ecommerce.tests.SignupTest">
-        <test-method signature="signupTest()[pri:0, instance:capstone.ecommerce.tests.SignupTest@3cd3e762]" started-at="2023-12-04T10:46:31 IST" name="signupTest" finished-at="2023-12-04T10:46:36 IST" duration-ms="4929" status="PASS">
+        <test-method signature="signupTest(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.SignupTest@3bf7ca37]" started-at="2023-12-08T16:59:44 IST" name="signupTest" finished-at="2023-12-08T17:03:20 IST" duration-ms="215541" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[headlesschrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signupTest -->
       </class> <!-- capstone.ecommerce.tests.SignupTest -->
       <class name="capstone.ecommerce.tests.HomeTest1">
-        <test-method signature="HomepageLinkTest1()[pri:0, instance:capstone.ecommerce.tests.HomeTest1@7eac9008]" started-at="2023-12-04T10:47:12 IST" name="HomepageLinkTest1" finished-at="2023-12-04T10:48:25 IST" duration-ms="72730" status="PASS">
+        <test-method signature="HomepageLinkTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.HomeTest1@4d1c00d0]" started-at="2023-12-08T17:07:06 IST" name="HomepageLinkTest1" finished-at="2023-12-08T17:10:49 IST" duration-ms="222360" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[headlesschrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HomepageLinkTest1 -->
       </class> <!-- capstone.ecommerce.tests.HomeTest1 -->
       <class name="capstone.ecommerce.tests.SearchaddTest">
-        <test-method signature="seachandAdd()[pri:0, instance:capstone.ecommerce.tests.SearchaddTest@74e52ef6]" started-at="2023-12-04T10:49:13 IST" name="seachandAdd" finished-at="2023-12-04T10:49:42 IST" duration-ms="28927" status="PASS">
+        <test-method signature="seachandAdd(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.SearchaddTest@bcec361]" started-at="2023-12-08T17:19:37 IST" name="seachandAdd" finished-at="2023-12-08T17:23:46 IST" duration-ms="248939" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[headlesschrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- seachandAdd -->
       </class> <!-- capstone.ecommerce.tests.SearchaddTest -->
-    </test> <!-- Test -->
+    </test> <!-- chromeTest -->
   </suite> <!-- Suite -->
 </testng-results>

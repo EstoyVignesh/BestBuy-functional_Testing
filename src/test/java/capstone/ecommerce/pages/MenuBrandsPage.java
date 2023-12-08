@@ -38,14 +38,20 @@ public class MenuBrandsPage extends SeWrappers {
 	@FindBy(xpath="//button[text()='Checkout']")
 	public WebElement chekout; 
 	
-	@FindBy(id="fld-e")
-	public WebElement mail1;
+	@FindBy(xpath="//button[text()='Continue as Guest']")
+	public WebElement goguest;
 	
-	@FindBy(id="fld-p1")
-	public WebElement pass2;
+	@FindBy(id="user.emailAddress")
+	public WebElement usmail;
 	
-	@FindBy(xpath="//button[text()='Sign In']")
-	public WebElement siin;
+	@FindBy(id="user.phone")
+	public WebElement usphone;
+	
+	@FindBy(xpath="//span[text()='Continue to Payment Information']")
+	public WebElement pay;
+	
+	@FindBy(xpath="//span[text()='Request failed because of network connection']")
+	public WebElement resp;
 	
 
 	
@@ -128,25 +134,44 @@ public class MenuBrandsPage extends SeWrappers {
 	{
 		waitForElement(chekout,20);
 		clickElement(chekout);
+		
 	}
 	
-	public void mailid(String ema)
+	public void gotoguest()
 	{
-		waitForElement(mail1,20);
-		typeText(mail1,ema);
+		waitForElement(goguest,20);
+		clickElement(goguest);
+		javascriptExecutorEndContent();
 	}
 
-	public void passid(String pwd)
+	public void mailid(String ema)
 	{
-		waitForElement(pass2,20);
-		typeText(pass2,pwd);
+		waitForElement(usmail,20);
+		typeText(usmail,ema);
 	}
 	
-	public void accSignin()
+	public void passid(String pwd)
 	{
-		waitForElement(siin,20);
-		clickElement(siin);	
+		waitForElement(usphone,20);
+		typeText(usphone,pwd);
+	}
+	
+	public void clicguest()
+	{
 		
+		waitForElement(pay,20);
+		clickElement(pay);
+		javascriptExecutorStartingContent();
+		
+	}
+	
+	public void message()
+	{
+		waitForElement(resp,20);
+		if(resp.getText().contains("failed"))
+		{
+			System.out.println("Problem in Payment submission");
+		}
 	}
 	
 	public void accexit()
@@ -154,6 +179,4 @@ public class MenuBrandsPage extends SeWrappers {
 		closeAllBrowsers();
 		
 	}
-	
-	
 }

@@ -1,5 +1,6 @@
 package capstone.ecommerce.tests;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import capstone.ecommerce.utils.ECwrapper;
@@ -11,12 +12,13 @@ public class BottonlinksTest extends SeWrappers {
 	ECwrapper ec = new ECwrapper();
 	Reports report = new Reports();
 	
+	@Parameters({"browser"})
 	@Test	
-	public void BottLinkTest1()
+	public void BottLinkTest1(String browserName)
 	{
 		try {
 			report.setTCDesc("Validating the Bottom Links of Home Page and Validate its Title ");
-			launchBrowser("https://www.bestbuy.com/");			    
+			launchCrossBrowser(browserName,"https://www.bestbuy.com/");			    
 			
 			
 			
