@@ -105,7 +105,7 @@ public class SeWrappers {
 		}
 	}
 		
-		// Listing Links
+		// Verifying Link to know whether it is broken or not.
 		 public void verifyUrl(String linkUrl)
 		  {
 			 

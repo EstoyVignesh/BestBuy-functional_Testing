@@ -34,8 +34,6 @@ public class ECwrapper extends SeWrappers
 	{
 	SignupPage1 sign = PageFactory.initElements(driver, SignupPage1.class);
 	
-	//sign.linkVerify();
-	//sign.verifyLinkActive(null);;
 	sign.ctrySel();
 	sign.greatdeals();
 	
@@ -49,7 +47,7 @@ public class ECwrapper extends SeWrappers
 	sign.setpassword("123123123");
 	sign.setRepass("123123123");
 	sign.setMobile("7815124sfvh");
-	captureScreenshot("Validation1-Signup");
+	captureScreenshot("Signup-InvalidData");
 	sign.clickAcc();
 	sign.returnToPage();
 	
@@ -74,7 +72,7 @@ public class ECwrapper extends SeWrappers
 		sign1.setMobile1("7092909386");
 		sign1.clickAcc1(1300);
 		sign1.signupCheck();
-		captureScreenshot("Validation2-Signup");	
+		captureScreenshot("Signup-ValidData");	
 		sign1.returnToPage1();
 		
 		
@@ -96,7 +94,7 @@ public class ECwrapper extends SeWrappers
 		log1.mailid("Vihhi@mail.com");
 		log1.passid("121221");
 		log1.accSignin();
-		captureScreenshot("Validation3-Login");
+		captureScreenshot("Login-InvalidData");
 		log1.returnToPage();
 		
 			
@@ -113,7 +111,7 @@ public class ECwrapper extends SeWrappers
 		log1.mailid("vickyphysics1998@gmail.com");
 		log1.passid("@Vignesh1998");
 		log1.accSignin();
-		captureScreenshot("Validation4-Login");
+		captureScreenshot("Login-ValidData");
 		log1.errorSignin();
 		log1.returnToPage2();
 			
@@ -142,9 +140,7 @@ public class ECwrapper extends SeWrappers
 	{
 		HomePage2 mu1 = PageFactory.initElements(driver, HomePage2.class);
 		
-		//mu1.ctrySel();
-		//mu1.greatdeals();
-				
+	
 		mu1.moreclic();
 		mu1.morecli1();
 		mu1.moreclic1();
@@ -184,8 +180,7 @@ public class ECwrapper extends SeWrappers
 		sd.addcart();
 		
 		sd.addcartVali();
-		sd.micart();
-		captureScreenshot("Validation5-cart");
+		sd.micart();		
 		sd.exitbrow();
 		
 	}
@@ -197,10 +192,9 @@ public class ECwrapper extends SeWrappers
 		sp.ctrySel();
 		sp.searchBr("Asus");
 		sp.clicsearch(300);
-		sp.addCart();
-		captureScreenshot("Validation6");
+		sp.addCart();		
 		sp.addCartVal();
-		captureScreenshot("Validation7");
+		captureScreenshot("Search&AddItem");
 		sp.searclose();
 		
 		
@@ -217,7 +211,7 @@ public class ECwrapper extends SeWrappers
 		mp.clicShopnow();
 		mp.clicCart();
 		mp.cartVald();
-		captureScreenshot("Validation8-Brands");
+		
 		mp.goCart();
 		mp.checkOut();
 		
@@ -226,7 +220,7 @@ public class ECwrapper extends SeWrappers
 		mp.passid("8989881998");
 		mp.clicguest();
 		mp.message();
-		captureScreenshot("Validation9-Payment");
+		captureScreenshot("SearchbyBrands-Payment");
 		mp.accexit();
 		
 		
@@ -246,12 +240,12 @@ public class ECwrapper extends SeWrappers
 	mp.clicShopnow();
 	mp.clicCart();
 	mp.cartVald();
-	captureScreenshot("Validation10-checkout");
+
 	mp.goCart();
 	mp.checkOutPay();
-	captureScreenshot("Validation11-Paypal");
+	captureScreenshot("ClickCheckoutPayPal");
 	mp.checkOutValidate();	
-	captureScreenshot("Validation12");
+	captureScreenshot("PaymentClick");
 	mp.exitPay();
 }
 
