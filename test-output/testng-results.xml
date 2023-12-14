@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="18" passed="16" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-08T16:58:58 IST" name="Suite" finished-at="2023-12-08T17:34:39 IST" duration-ms="2141119">
+  <suite started-at="2023-12-14T11:17:27 IST" name="Suite" finished-at="2023-12-14T11:37:06 IST" duration-ms="1179628">
     <groups>
     </groups>
-    <test started-at="2023-12-08T16:58:58 IST" name="chromeTest" finished-at="2023-12-08T17:34:39 IST" duration-ms="2141119">
-      <class name="capstone.ecommerce.utils.Reports">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:capstone.ecommerce.utils.Reports@477b4cdf]" started-at="2023-12-08T16:58:58 IST" name="startReport" finished-at="2023-12-08T16:58:58 IST" duration-ms="370" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:capstone.ecommerce.utils.Reports@477b4cdf]" started-at="2023-12-08T17:34:40 IST" name="endReport" finished-at="2023-12-08T17:34:40 IST" duration-ms="341" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- capstone.ecommerce.utils.Reports -->
+    <test started-at="2023-12-14T11:17:27 IST" name="chromeTest" finished-at="2023-12-14T11:28:54 IST" duration-ms="687461">
       <class name="capstone.ecommerce.tests.LoginTest">
-        <test-method signature="signupTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.LoginTest@79079097]" started-at="2023-12-08T17:03:20 IST" name="signupTest1" finished-at="2023-12-08T17:07:06 IST" duration-ms="226424" status="PASS">
+        <test-method signature="signupTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.LoginTest@79079097]" started-at="2023-12-14T11:18:44 IST" name="signupTest1" finished-at="2023-12-14T11:19:31 IST" duration-ms="46780" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[headlesschrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
@@ -30,11 +20,11 @@
         </test-method> <!-- signupTest1 -->
       </class> <!-- capstone.ecommerce.tests.LoginTest -->
       <class name="capstone.ecommerce.tests.ShopByDeptTest">
-        <test-method signature="deptshop(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.ShopByDeptTest@4e08711f]" started-at="2023-12-08T17:14:01 IST" name="deptshop" finished-at="2023-12-08T17:19:37 IST" duration-ms="336483" status="PASS">
+        <test-method signature="deptshop(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.ShopByDeptTest@4e08711f]" started-at="2023-12-14T11:21:27 IST" name="deptshop" finished-at="2023-12-14T11:22:54 IST" duration-ms="87386" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[headlesschrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
@@ -43,11 +33,11 @@
         </test-method> <!-- deptshop -->
       </class> <!-- capstone.ecommerce.tests.ShopByDeptTest -->
       <class name="capstone.ecommerce.tests.LinkverifyTest">
-        <test-method signature="signupTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.LinkverifyTest@3c9754d8]" started-at="2023-12-08T16:58:58 IST" name="signupTest1" finished-at="2023-12-08T16:59:44 IST" duration-ms="45833" status="PASS">
+        <test-method signature="signupTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.LinkverifyTest@3c9754d8]" started-at="2023-12-14T11:17:27 IST" name="signupTest1" finished-at="2023-12-14T11:17:47 IST" duration-ms="20644" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[headlesschrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
@@ -56,11 +46,11 @@
         </test-method> <!-- signupTest1 -->
       </class> <!-- capstone.ecommerce.tests.LinkverifyTest -->
       <class name="capstone.ecommerce.tests.MenuBrandsTest">
-        <test-method signature="selectbyBrand(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.MenuBrandsTest@26794848]" started-at="2023-12-08T17:23:46 IST" name="selectbyBrand" finished-at="2023-12-08T17:29:13 IST" duration-ms="327078" status="PASS">
+        <test-method signature="selectbyBrand(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.MenuBrandsTest@26794848]" started-at="2023-12-14T11:23:31 IST" name="selectbyBrand" finished-at="2023-12-14T11:25:03 IST" duration-ms="91981" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[headlesschrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
@@ -69,11 +59,11 @@
         </test-method> <!-- selectbyBrand -->
       </class> <!-- capstone.ecommerce.tests.MenuBrandsTest -->
       <class name="capstone.ecommerce.tests.BottonlinksTest">
-        <test-method signature="BottLinkTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.BottonlinksTest@4b2bac3f]" started-at="2023-12-08T17:10:49 IST" name="BottLinkTest1" finished-at="2023-12-08T17:14:01 IST" duration-ms="192360" status="PASS">
+        <test-method signature="BottLinkTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.BottonlinksTest@4b2bac3f]" started-at="2023-12-14T11:21:03 IST" name="BottLinkTest1" finished-at="2023-12-14T11:21:27 IST" duration-ms="23967" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[headlesschrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
@@ -82,11 +72,11 @@
         </test-method> <!-- BottLinkTest1 -->
       </class> <!-- capstone.ecommerce.tests.BottonlinksTest -->
       <class name="capstone.ecommerce.tests.PaypalTest">
-        <test-method signature="selectbyBrand(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.PaypalTest@302552ec]" started-at="2023-12-08T17:29:13 IST" name="selectbyBrand" finished-at="2023-12-08T17:34:39 IST" duration-ms="326000" status="PASS">
+        <test-method signature="selectbyBrand(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.PaypalTest@302552ec]" started-at="2023-12-14T11:25:03 IST" name="selectbyBrand" finished-at="2023-12-14T11:28:54 IST" duration-ms="230705" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[headlesschrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
@@ -95,11 +85,11 @@
         </test-method> <!-- selectbyBrand -->
       </class> <!-- capstone.ecommerce.tests.PaypalTest -->
       <class name="capstone.ecommerce.tests.SignupTest">
-        <test-method signature="signupTest(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.SignupTest@3bf7ca37]" started-at="2023-12-08T16:59:44 IST" name="signupTest" finished-at="2023-12-08T17:03:20 IST" duration-ms="215541" status="PASS">
+        <test-method signature="signupTest(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.SignupTest@3bf7ca37]" started-at="2023-12-14T11:17:47 IST" name="signupTest" finished-at="2023-12-14T11:18:44 IST" duration-ms="56885" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[headlesschrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
@@ -108,24 +98,68 @@
         </test-method> <!-- signupTest -->
       </class> <!-- capstone.ecommerce.tests.SignupTest -->
       <class name="capstone.ecommerce.tests.HomeTest1">
-        <test-method signature="HomepageLinkTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.HomeTest1@4d1c00d0]" started-at="2023-12-08T17:07:06 IST" name="HomepageLinkTest1" finished-at="2023-12-08T17:10:49 IST" duration-ms="222360" status="PASS">
+        <test-method signature="HomepageLinkTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.HomeTest1@4d1c00d0]" started-at="2023-12-14T11:19:31 IST" name="HomepageLinkTest1" finished-at="2023-12-14T11:21:03 IST" duration-ms="91562" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[headlesschrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at capstone.ecommerce.pages.HomePage1.crecard(HomePage1.java:112)
+at capstone.ecommerce.utils.ECwrapper.homepageLink1(ECwrapper.java:131)
+at capstone.ecommerce.tests.HomeTest1.HomepageLinkTest1(HomeTest1.java:26)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HomepageLinkTest1 -->
       </class> <!-- capstone.ecommerce.tests.HomeTest1 -->
       <class name="capstone.ecommerce.tests.SearchaddTest">
-        <test-method signature="seachandAdd(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.SearchaddTest@bcec361]" started-at="2023-12-08T17:19:37 IST" name="seachandAdd" finished-at="2023-12-08T17:23:46 IST" duration-ms="248939" status="PASS">
+        <test-method signature="seachandAdd(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.SearchaddTest@bcec361]" started-at="2023-12-14T11:22:54 IST" name="seachandAdd" finished-at="2023-12-14T11:23:31 IST" duration-ms="37330" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[headlesschrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
@@ -134,5 +168,178 @@
         </test-method> <!-- seachandAdd -->
       </class> <!-- capstone.ecommerce.tests.SearchaddTest -->
     </test> <!-- chromeTest -->
+    <test started-at="2023-12-14T11:28:54 IST" name="EdgeTest" finished-at="2023-12-14T11:37:06 IST" duration-ms="492050">
+      <class name="capstone.ecommerce.utils.Reports">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:capstone.ecommerce.utils.Reports@305b7c14]" started-at="2023-12-14T11:17:26 IST" name="startReport" finished-at="2023-12-14T11:17:27 IST" duration-ms="423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:capstone.ecommerce.utils.Reports@305b7c14]" started-at="2023-12-14T11:37:06 IST" name="endReport" finished-at="2023-12-14T11:37:07 IST" duration-ms="417" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- capstone.ecommerce.utils.Reports -->
+      <class name="capstone.ecommerce.tests.LoginTest">
+        <test-method signature="signupTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.LoginTest@bccb269]" started-at="2023-12-14T11:30:20 IST" name="signupTest1" finished-at="2023-12-14T11:31:13 IST" duration-ms="53534" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupTest1 -->
+      </class> <!-- capstone.ecommerce.tests.LoginTest -->
+      <class name="capstone.ecommerce.tests.ShopByDeptTest">
+        <test-method signature="deptshop(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.ShopByDeptTest@7d8704ef]" started-at="2023-12-14T11:33:03 IST" name="deptshop" finished-at="2023-12-14T11:34:35 IST" duration-ms="91389" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deptshop -->
+      </class> <!-- capstone.ecommerce.tests.ShopByDeptTest -->
+      <class name="capstone.ecommerce.tests.LinkverifyTest">
+        <test-method signature="signupTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.LinkverifyTest@6913c1fb]" started-at="2023-12-14T11:28:54 IST" name="signupTest1" finished-at="2023-12-14T11:29:13 IST" duration-ms="18509" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupTest1 -->
+      </class> <!-- capstone.ecommerce.tests.LinkverifyTest -->
+      <class name="capstone.ecommerce.tests.MenuBrandsTest">
+        <test-method signature="selectbyBrand(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.MenuBrandsTest@158a8276]" started-at="2023-12-14T11:35:38 IST" name="selectbyBrand" finished-at="2023-12-14T11:36:27 IST" duration-ms="49241" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectbyBrand -->
+      </class> <!-- capstone.ecommerce.tests.MenuBrandsTest -->
+      <class name="capstone.ecommerce.tests.BottonlinksTest">
+        <test-method signature="BottLinkTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.BottonlinksTest@17f7cd29]" started-at="2023-12-14T11:32:37 IST" name="BottLinkTest1" finished-at="2023-12-14T11:33:03 IST" duration-ms="26216" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BottLinkTest1 -->
+      </class> <!-- capstone.ecommerce.tests.BottonlinksTest -->
+      <class name="capstone.ecommerce.tests.PaypalTest">
+        <test-method signature="selectbyBrand(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.PaypalTest@3c3d9b6b]" started-at="2023-12-14T11:36:27 IST" name="selectbyBrand" finished-at="2023-12-14T11:37:06 IST" duration-ms="39367" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectbyBrand -->
+      </class> <!-- capstone.ecommerce.tests.PaypalTest -->
+      <class name="capstone.ecommerce.tests.SignupTest">
+        <test-method signature="signupTest(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.SignupTest@66d18979]" started-at="2023-12-14T11:29:13 IST" name="signupTest" finished-at="2023-12-14T11:30:20 IST" duration-ms="67020" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupTest -->
+      </class> <!-- capstone.ecommerce.tests.SignupTest -->
+      <class name="capstone.ecommerce.tests.HomeTest1">
+        <test-method signature="HomepageLinkTest1(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.HomeTest1@609cd4d8]" started-at="2023-12-14T11:31:13 IST" name="HomepageLinkTest1" finished-at="2023-12-14T11:32:37 IST" duration-ms="83853" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at capstone.ecommerce.pages.HomePage1.mbbm(HomePage1.java:103)
+at capstone.ecommerce.utils.ECwrapper.homepageLink1(ECwrapper.java:130)
+at capstone.ecommerce.tests.HomeTest1.HomepageLinkTest1(HomeTest1.java:26)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HomepageLinkTest1 -->
+      </class> <!-- capstone.ecommerce.tests.HomeTest1 -->
+      <class name="capstone.ecommerce.tests.SearchaddTest">
+        <test-method signature="seachandAdd(java.lang.String)[pri:0, instance:capstone.ecommerce.tests.SearchaddTest@13b6aecc]" started-at="2023-12-14T11:34:35 IST" name="seachandAdd" finished-at="2023-12-14T11:35:38 IST" duration-ms="62879" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seachandAdd -->
+      </class> <!-- capstone.ecommerce.tests.SearchaddTest -->
+    </test> <!-- EdgeTest -->
   </suite> <!-- Suite -->
 </testng-results>

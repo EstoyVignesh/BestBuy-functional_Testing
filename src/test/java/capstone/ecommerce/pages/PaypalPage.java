@@ -39,7 +39,7 @@ public class PaypalPage extends SeWrappers {
 	@FindBy(xpath="//button[@class='checkout-buttons__paypal btn v-medium']")
 	public WebElement paypal;
 	
-	@FindBy(xpath="//span[text()='This site can’t be reached']")
+	@FindBy(xpath="//strong[text()='https://www.bestbuy.com/checkout/r/paypal-checkout']")
 	public WebElement validate;
 	
 	
