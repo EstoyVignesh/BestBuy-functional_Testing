@@ -1,6 +1,7 @@
 package capstone.ecommerce.utils;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
@@ -8,6 +9,10 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -34,6 +39,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class SeWrappers {
 
 	public static WebDriver driver=null;
+	public  String excelfile;
+	//public String sheet1;
+	//public String sheet2;
 
 
 	//method to launch the chrome browser with the given url
@@ -133,6 +141,8 @@ public class SeWrappers {
 		           
 		        }    
 				}
+		 
+		 
 		  
 	//method to close the current browser window
 	public void closeCurrentBrowser()
@@ -165,6 +175,38 @@ public class SeWrappers {
 
 		}
 	}
+	
+	
+	//Read Excel
+		public static String[][] excelRead(String fileName, String sheetName) throws IOException  {
+			
+			
+	            XSSFWorkbook workbook = new XSSFWorkbook("./src/test/resources/"+fileName+".xlsx");
+	            XSSFSheet sheet = workbook.getSheet(sheetName);
+	           
+	            int noOfRows = sheet.getLastRowNum();
+	            short noOfCols = sheet.getRow(0).getLastCellNum();
+	           
+	           String[][] data = new String[noOfRows][noOfCols];
+	            
+	 
+	            for (int i = 1; i <= noOfRows; i++) {
+	            	XSSFRow row = sheet.getRow(i);
+	                for (int j = 0; j < noOfCols; j++) {
+	                    
+	                  XSSFCell cell = row.getCell(j);
+	                    data[i - 1][j] = cell.getStringCellValue();
+	                    
+	                    System.out.println(cell.getStringCellValue());
+	                }
+	               
+	            }
+	            workbook.close();
+	 
+	        
+	        return data;
+	        
+	 }
 
 	//method to type text in the web page
 	public void typeText(WebElement element, String text)
